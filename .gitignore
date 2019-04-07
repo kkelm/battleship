@@ -1,0 +1,12 @@
+build/
+dist/
+*.txt
+*.dat
+*.TXT
+*~
+*#
+lib/
+.idea
+.DS_Store
+hs_err_pid*
+*.iml
