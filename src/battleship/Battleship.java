@@ -49,6 +49,10 @@ public class Battleship
             compMakeGuess(computer, userPlayer);
         }
     }
+
+    public String getTest() {
+        return "Works";
+    }
     
     private static void compMakeGuess(Player comp, Player user)
     {

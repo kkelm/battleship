@@ -12,7 +12,7 @@ public class BattleshipJavaBean {
 
 
     public BattleshipJavaBean() {
-        pageTitle = "Battleship v1.0";
+        pageTitle = "Submit Coordinates";
     }
 
     public String getHeaderTemplate() {

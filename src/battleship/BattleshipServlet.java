@@ -17,6 +17,8 @@ public class BattleshipServlet extends HttpServlet {
     Battleship battleship;
     Player computer;
 
+    String paramStatus;
+
     public void init() throws ServletException {
 
         battleship = new Battleship();
@@ -26,10 +28,30 @@ public class BattleshipServlet extends HttpServlet {
     //Use in place of doGet ?
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        paramStatus = request.getParameterMap().containsKey("status") ? request.getParameter("status") : "";
+
+        if (paramStatus.equals("play")) {
+
+            //javaBean.setPageTitle("Play 2");
+
+            log("true " + paramStatus);
+        }
+        else {
+            log("false " + paramStatus);
 
 
+            //javaBean.setPageTitle("Java Battleship v" + (int)((Math.random() * 10) + 1));
+
+            //javaBean.setPageTitle(paramStatus + (int)((Math.random() * 10) + 1));
+
+            //computer = new Player();
+            //battleship.setupComputer(computer);
+            //computer.playerGrid.printShips();
+        }
 
         //BattleshipJavaBean javaBean = new BattleshipJavaBean();
+
+        //doGet(request, response);
 
 
     }
@@ -40,32 +62,28 @@ public class BattleshipServlet extends HttpServlet {
         BattleshipJavaBean javaBean = new BattleshipJavaBean();
 
 
-        String paramStatus = request.getParameter("status");
+        paramStatus = request.getParameterMap().containsKey("status") ? request.getParameter("status") : "";
 
         if (paramStatus.equals("play")) {
 
+            //javaBean.setPageTitle("Submit Coordinates");
 
-            javaBean.setPageTitle("Play 2");
         }
         else {
-            //javaBean.setPageTitle("Java Battleship v" + (int)((Math.random() * 10) + 1));
 
-            javaBean.setPageTitle(request.getParameter("status") + (int)((Math.random() * 10) + 1));
-
+            //javaBean.setPageTitle(paramStatus + (int)((Math.random() * 10) + 1));
 
             computer = new Player();
             battleship.setupComputer(computer);
 
             computer.playerGrid.printShips();
+
         }
 
         request.setAttribute("pageTitleBean", javaBean);
 
-
-
-
-
-        String url = "/index.jsp";
+        //String url = "/index.jsp?status=" + request.getParameter("status");
+        String url = "/index.jsp?status=" + request.getParameter("status");
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 

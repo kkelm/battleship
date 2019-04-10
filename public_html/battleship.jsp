@@ -1,6 +1,9 @@
-<%@ page import="battleship.Battleship" %>
-<%@ page import="battleship.Player" %>
 <%@ include file="template/header.jsp" %>
+
+
+<a href="/battleship/start?status=play" class="btn btn-primary">
+    <% //this.computer.getTest(); %>
+</a>
 
 
 <%

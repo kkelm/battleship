@@ -12,13 +12,14 @@ import java.io.*;
         urlPatterns={"/play"}
 )
 
-public class PlayServlet extends HttpServlet {
+public class PlayServlet extends BattleshipServlet {
 
     public void init() throws ServletException {}
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(Player player, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         BattleshipJavaBean javaBean = new BattleshipJavaBean();
+
 
         //BattleshipServlet battleshipServlet = new BattleshipServlet();
 
