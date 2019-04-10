@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class Battleship
 {
     public static Scanner reader = new Scanner(System.in);
+
+    //test
       
     public static void main(String[] args)
     {
