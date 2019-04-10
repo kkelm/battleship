@@ -8,10 +8,8 @@ import java.util.Scanner;
 public class Battleship
 {
     public static Scanner reader = new Scanner(System.in);
-
-    //test2
       
-    public static void main(String[] args)
+    public static void mainREMOVE(String[] args)
     {
         System.out.println("JAVA BATTLESHIP - ** Yuval Marcus **");  
         

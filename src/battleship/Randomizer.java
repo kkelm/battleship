@@ -1,5 +1,4 @@
-package battleship;
-// This specific Java code was given by CodeHS, to help with the random number aspect of the program
+package battleship;// This specific Java code was given by CodeHS, to help with the random number aspect of the program
 import java.util.*;
 /**
  * This code was copied from https://github.com/ymarcus93/Java-Battleship

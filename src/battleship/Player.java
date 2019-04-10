@@ -1,4 +1,5 @@
 package battleship;
+
 /**
  * This code was copied from https://github.com/ymarcus93/Java-Battleship
  * @author ymarcus93

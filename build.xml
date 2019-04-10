@@ -82,7 +82,8 @@
       destdir="${web_classes}"
       extdirs="${lib}"
       verbose="false"
-      includes="utilities/**"
+      includes="battleship/**,
+                utilities/**"
       excludes="*.jsp,
                 *.html,
                 *.xml"
