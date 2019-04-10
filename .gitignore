@@ -5,7 +5,7 @@ dist/
 *.TXT
 *~
 *#
-lib/
+
 .idea
 .DS_Store
 hs_err_pid*
