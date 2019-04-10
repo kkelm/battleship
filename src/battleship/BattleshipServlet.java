@@ -40,12 +40,12 @@ public class BattleshipServlet extends HttpServlet {
         BattleshipJavaBean javaBean = new BattleshipJavaBean();
 
 
+        String paramStatus = request.getParameter("status");
+
+        if (paramStatus.equals("play")) {
 
 
-        if (request.getParameter("status").toString() == "play") {
-
-
-            javaBean.setPageTitle("Play");
+            javaBean.setPageTitle("Play 2");
         }
         else {
             //javaBean.setPageTitle("Java Battleship v" + (int)((Math.random() * 10) + 1));
