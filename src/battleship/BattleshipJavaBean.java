@@ -6,9 +6,11 @@ public class BattleshipJavaBean {
     private String footerTemplate;
     private String pageTitle;
 
-    /**
-     *  Constructor
-     */
+    private Battleship battleship;
+
+    private Player computer;
+
+
     public BattleshipJavaBean() {
         pageTitle = "Battleship v1.0";
     }
@@ -35,6 +37,24 @@ public class BattleshipJavaBean {
 
     public void setPageTitle(String pageTitle) {
         this.pageTitle = pageTitle;
+    }
+
+
+    public Battleship getBattleship() {
+        return battleship;
+    }
+
+    public void setBattleship(Battleship battleship) {
+        this.battleship = battleship;
+    }
+
+
+    public Player getComputer() {
+        return computer;
+    }
+
+    public void setComputer(Player computer) {
+        this.computer = computer;
     }
 
 }

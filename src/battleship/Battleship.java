@@ -185,7 +185,7 @@ public class Battleship
         }
     }
 
-    private static void setupComputer(Player p)
+    public static void setupComputer(Player p)
     {
         System.out.println();
         int counter = 1;

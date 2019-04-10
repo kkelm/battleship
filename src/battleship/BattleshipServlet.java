@@ -1,10 +1,11 @@
 package battleship;
 
-import java.io.*;
-///import java.util.Date;
 import javax.servlet.*;
-import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+///import java.util.Date;
 
 @WebServlet (
         name="Battleship Servlet",
@@ -15,10 +16,26 @@ public class BattleshipServlet extends HttpServlet {
 
     public void init() throws ServletException {}
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    //Use in place of doGet ?
+    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         BattleshipJavaBean javaBean = new BattleshipJavaBean();
+
+        javaBean.setPageTitle("Java Battleship");
+        request.setAttribute("pageTitleBean", javaBean);
+
+        String url = "/index.jsp";
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+
+        dispatcher.forward(request, response);
+
+    }
+
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        /*
 
         javaBean.setPageTitle("Battleship");
 
@@ -28,6 +45,7 @@ public class BattleshipServlet extends HttpServlet {
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
+        */
 
         /*
 
