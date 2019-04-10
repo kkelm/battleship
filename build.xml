@@ -6,7 +6,7 @@
 <project default="deploy">
   <property name="user_home" value="${user.home}" />
   <property name="project_home" value="${user.dir}" />
-  <property name="tomcat" value="/opt/tomcat" />
+  <property name="tomcat" value="${user_home}/tomcat" />
   <property name="src" value="src"/>
   <property name="battleship" value="${src}/battleship" />
   <property name="utilities" value="${src}/utilities" />

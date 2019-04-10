@@ -1,0 +1,38 @@
+form {
+    border: none;
+    text-align: center;
+    margin-left: 800px;
+    margin-right: 800px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #397be5;
+    padding-bottom: 5px;
+
+    animation-name: glowy;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #66c2ff, #3385ff, #0047b3, #001433);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 1000px;
+}
+
+input {
+    /* background-color: #008CBA; */
+}
+
+span {
+    color: white;
+    padding-top: 5px;
+    height: 90px;
+
+}
+
+@keyframes glowy {
+  0%   {background-color:#397be5;}
+  50%  {background-color:#025ff2;}
+  100% {background-color:#397be5;}
+}
