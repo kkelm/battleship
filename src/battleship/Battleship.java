@@ -9,7 +9,7 @@ public class Battleship
 {
     public static Scanner reader = new Scanner(System.in);
 
-    //test
+    //test2
       
     public static void main(String[] args)
     {
