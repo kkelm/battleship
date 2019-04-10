@@ -61,19 +61,20 @@
            verbose="false"
            excludes="*.jsp,
                      *.html,
-                     *.xml,
-                     battleship/**"
+                     *.xml"
            deprecation="on"
            debug="on"
            includeAntRuntime="false" >
        <compilerarg value="-Xlint:unchecked"/>
      </javac>
+    <echo message="Compile Complete" />
   </target>
 
   <target name="build_battleship" depends="backup, clean, compile_battleship">
     <jar destfile="${battleship_lib}">
       <fileset dir="${build}/classes" excludes="${build}/classes/battleship/tests/**" />
     </jar>
+    <echo message="Build Complete" />
   </target>
 
   <target name="compile_web" depends="init">
