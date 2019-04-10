@@ -3,7 +3,7 @@ package battleship;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
-import java.io.IOException;
+import java.io.*;
 
 ///import java.util.Date;
 
@@ -14,15 +14,56 @@ import java.io.IOException;
 
 public class BattleshipServlet extends HttpServlet {
 
-    public void init() throws ServletException {}
+    Battleship battleship;
+    Player computer;
 
+    public void init() throws ServletException {
+
+        battleship = new Battleship();
+
+    }
+/*
     //Use in place of doGet ?
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
+
+
+        //BattleshipJavaBean javaBean = new BattleshipJavaBean();
+
+
+    }
+*/
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         BattleshipJavaBean javaBean = new BattleshipJavaBean();
 
-        javaBean.setPageTitle("Java Battleship");
+
+
+
+        if (request.getParameter("status").toString() == "play") {
+
+
+            javaBean.setPageTitle("Play");
+        }
+        else {
+            //javaBean.setPageTitle("Java Battleship v" + (int)((Math.random() * 10) + 1));
+
+            javaBean.setPageTitle(request.getParameter("status") + (int)((Math.random() * 10) + 1));
+
+
+            computer = new Player();
+            battleship.setupComputer(computer);
+
+            computer.playerGrid.printShips();
+        }
+
         request.setAttribute("pageTitleBean", javaBean);
+
+
+
+
 
         String url = "/index.jsp";
 
@@ -30,10 +71,6 @@ public class BattleshipServlet extends HttpServlet {
 
         dispatcher.forward(request, response);
 
-    }
-
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         /*
 

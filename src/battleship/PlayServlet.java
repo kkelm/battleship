@@ -26,7 +26,9 @@ public class PlayServlet extends HttpServlet {
         request.setAttribute("pageTitleBean", javaBean);
 
 
+        //BattleshipServlet battleshipServlet = new BattleshipServlet();
 
+        //battleshipServlet.computer.playerGrid.printShips();
 
         /*
         javaBean.setComputer(computer);

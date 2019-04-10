@@ -4,12 +4,14 @@
 
 
 <%
+    /*
     Battleship battleship = new Battleship();
 
     Player computer = new Player();
     battleship.setupComputer(computer);
 
     computer.playerGrid.printShips();
+    */
 %>
 
 
